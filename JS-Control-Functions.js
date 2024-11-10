@@ -51,15 +51,28 @@ function deposit(depositAmount) {
     return balance;
 }
 
+// Test deposit function
+deposit(100);
+console.log('Balance after deposit: $' + balance);
+
 // Task 2 
 function withdrawal(withdrawalAmount) {
     if (balance >= withdrawalAmount) {
         balance -= withdrawalAmount; 
         return balance;
     } 
+    console.log('Insufficient funds for withdrawal');
+    return balance;
 }
+
+// Test withdrawal function
+withdrawal(50);
+console.log('Balance after withdrawal: $' + balance);
 
 // Task 3
 function checkBalance(balance) {
     console.log('Amount: $' + balance); 
 }
+
+// Test checkBalance function
+checkBalance(balance);
